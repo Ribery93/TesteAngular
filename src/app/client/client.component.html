@@ -1,0 +1,26 @@
+<div class="col-11 ml-4">
+  <div class="row">
+    <form (ngSubmit)="salvar()">
+
+      <h3 class="p-3">{{titulo}}</h3>
+      <br/>
+      <div class="row offset-1">
+        <div class="form-group pr-3">
+          <label>Nome:</label>
+          <input type="input" class="form-control" name="nome" size="30" [(ngModel)]="client.name"/>
+        </div>
+        <div class="form-group pr-3">
+          <label>Email</label>
+          <input type="input" class="form-control" name="nome" size="30" [(ngModel)]="client.email"/>
+        </div>
+        <div class="form-group">
+          <label>Nascimento</label>
+          <input type="date" class="form-control" placeholder="yyyy-MM-dd" min="2000-01-01" max="2033-12-31" required [(ngModel)]="client.birthday"/>
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary col-6 offset-3 mt-5" type="submit">Salvar</button>
+    </form>
+  </div>
+</div>
